@@ -1,0 +1,8 @@
+*.Lesson_Allocation_Room
+{
+    display: inline;
+}
+*.Lesson_Allocation_Teachers
+{
+    display: none;
+}

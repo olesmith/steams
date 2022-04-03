@@ -1,0 +1,37 @@
+*.applicationtop
+{
+    display: none;
+    overflow: hidden; 
+}
+*.applicationmiddle
+{  
+    overflow: hidden; 
+}
+*.applicationbottom
+{ 
+    display: none;
+    overflow: hidden; 
+}
+
+*.applicationleft
+{
+    display: none;
+    overflow: hidden; 
+}
+*.applicationright
+{
+    display: none;
+    overflow: hidden; 
+}
+*.applicationcenter
+{
+	text-align: left;
+	width: 100%;
+    max-width: 100%;
+    overflow: hidden; 
+}
+
+*.leftmenu
+{
+    display: none;
+}

@@ -1,0 +1,140 @@
+/* Empty to hide/show Languages Messages on Module Info screen */
+*.Language
+{
+}
+*.ModuleCell
+{
+    background-color: #f3f3f3;
+	box-shadow: 0px 0px 12px -10px #000 inset;
+}
+/* Search Table */
+*.searchrow
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Bold;
+	font-style: normal;
+}
+*.searchtable
+{
+	font-size: 16px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+	font-style: normal;
+}
+*.searchtabletitle
+{
+	color: #3399ff;
+	font-size: 16px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+*.searchtitle
+{
+	font-size: 12px;
+	text-decoration: None;
+	text-align: right;
+	font-weight: Bold;
+}
+*.searchdata
+{
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+	font-weight: Bold;
+}
+*.search_field
+{
+	font-size: 12px;
+	text-decoration: italic;
+	text-align: left;
+	font-weight: none;
+}
+*.search_div_field
+{
+}
+*.search_options
+{
+	font-size: 12px;
+	text-decoration: italic;
+	text-align: left;
+	font-weight: bold;
+}
+*.Search_Details
+{
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+	font-weight: Bold;
+}
+*.search_selected
+{
+	font-size: 16px;
+	text-decoration: Italic;
+	text-align: right;
+	font-weight: Bold;
+    text-color: #f3f3f3;
+    background-color: #000000;
+}
+*.printformtitle
+{
+  	color: #000000;
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+	font-weight: Bold;
+}
+
+
+/* Data cells stuff */
+*.datatitle
+{
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Bold;
+}
+*.datatitlelink
+{
+	text-decoration: None;
+	font-weight: Bold;
+}
+*.datatitleimg
+{
+}
+*.data
+{
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Normal;
+}
+a.head /* head cells in items horisontal table */
+{
+	font-size: 14px;
+	text-decoration:  underline;
+    font-weight: none;
+	text-align: left;
+
+	color: blue;
+}
+*.head /* head cells in items horisontal table */
+{
+	font-size: 13px;
+	text-decoration:  None;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+	background-color: #fbfbfb;
+}
+*.title  /* title cell in item vertical table */
+{
+	font-size: 14px;
+	text-decoration: None;
+    font-weight: bold;
+	text-align: center;
+
+	color: #000000;
+	/* background-color: #FFFFFF; */
+}

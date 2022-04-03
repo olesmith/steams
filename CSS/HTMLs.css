@@ -1,0 +1,161 @@
+*
+{
+	font-size: 12px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+html
+{
+	overflow-x: auto;
+}  
+body
+{ 
+	background-color: #FFFFFF;
+}
+a
+{
+	color: #0064b4;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: underline;
+	align: center;
+	font-weight: Bold;
+}
+h1
+{
+	color: #0064b4;
+	font-size: 20px ;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+h2
+{
+  	color:#0064b4;
+	font-size: 18px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+h3
+{
+  	color: #0064b4;
+	font-size: 16px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+h4
+{
+  	color: #0064b4;
+	font-size: 14px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+h5
+{
+  	color: #0064b4;
+	font-size: 13px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+h6
+{
+  	color: #3366ff;
+	font-size: 12px;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+button
+{
+  	color: #333333;
+  	background-color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+}
+button:hover
+	  	   {
+  	  		   color: #000000;
+  	  		   background-color: #FAEBD7;
+  	  		   /* background-color: #000000; 8*/
+	  		   /* font-size: 12px; */
+	  		   text-decoration: None;
+	  		   text-align: left;
+		   }
+button[type=reset]
+{
+  	margin-left: 1rem;
+}
+input
+{
+  	color: #000000;
+  	background-color: #F2F2F2;
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+}
+option.selected
+{
+  	color: #333333;
+    font-weight: bold;
+	text-decoration: italic;
+	text-align: left;
+}
+
+table
+{
+	color: #000000;
+	background-color: #FFFFFF;
+	margin-bottom: 0 !important;
+}
+th
+{
+}
+td
+{
+	vertical-align: top;
+	text-align: left;
+}
+tr
+{
+}
+form.form table td
+{
+	border: none !important;
+}
+form.form table
+{
+	/*background-color: #fff; */
+	box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+	color: #4a4a4a;
+	max-width: 100%;
+	position: relative;
+}
+*.borderless-table td
+{
+	border: none;
+}
+*.dynbutton
+{
+  	color: #333333;
+  	background-color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: None;
+	text-align: left;
+}
+
+*.myinput
+{
+   color: #333333;
+   background-color: #FFFFFF;
+   border-radius: 5px;
+}

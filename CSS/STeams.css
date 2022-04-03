@@ -1,0 +1,84 @@
+*.Result_Goals
+{
+	color: green;
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+}
+*.Result
+{
+	color: blue;
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+}
+*.Result_Goal
+{
+	color: orange;
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+}
+*.Points
+{
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+        display: block;	
+}
+
+
+*.Result
+{
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+
+*.Result_10
+{
+	color: green;
+}
+*.Result_7
+{
+	color: blue;
+}
+*.Result_5
+{
+	color: orange;
+}
+*.Result_2
+{
+	color: magenta;
+}
+*.Result_0
+{
+	color: red;
+}
+
+*.Matches_Total,*.Points_Total
+{
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+    color: orange;
+}
+
+*.Matches_Victory,*.Matches_Draw,*.Matches_Defeat
+{
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+    color:blue;
+}
+
+*.Goals_Favor,*.Goals_Against,*.Goals_Total
+{
+	font-size: smaller;
+	text-decoration: none;
+	font-weight: bold;
+    color: brown;
+}
+

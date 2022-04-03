@@ -1,0 +1,149 @@
+*.leftmenulist
+{
+	background-color: #ffffff;
+	color: #333333;
+	color: blue;
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Bold;
+	list-style-type: none;
+        white-space: nowrap;
+}
+*.leftmenulist>li
+{
+	margin-left: 0.5em;
+}
+
+*.normal
+{
+        color: blue;
+}
+
+*.monday
+{
+   color: #0000FF;
+}
+*.tuesday
+{
+        color: #2288FF;
+}
+*.wednesday
+{
+        color: #4444FF;
+}
+*.thursday
+{
+        color: #6688FF;
+}
+*.friday
+{
+        color: #8822FF;
+}
+
+
+*.saturday
+{
+	color: #00bfff;
+}
+*.sunday
+{
+	color: orange;
+}
+*.holiday
+{
+	color: magenta;
+}
+*.recess
+{
+	color: gray;
+}
+
+*.dayly_start
+{
+	color: gray;
+}
+*.dayly_end
+{
+	color: gray;
+}
+
+*.period_start
+{
+	color: gray;
+}
+*.period_end
+{
+	color: gray;
+}
+
+
+*Trimester_0
+{
+    padding: 0px;
+}
+*Trimester_1
+{
+    padding: 0px;
+}
+*Trimester_2
+{
+    padding: 0px;
+}
+*Trimester_3
+{
+    padding: 0px;
+}
+*Trimester_4
+{
+    padding: 0px;
+}
+*Trimester_5
+{
+    padding: 0px;
+}
+*Trimester_6
+{
+    padding: 0px;
+}
+
+*.Final
+{
+	font-weight: Bold;
+}
+*.Partial
+{
+	opacity: 0.7;
+}
+*.Trimester
+{
+	opacity: 0.6;
+}
+
+*.Media
+{
+	font-weight: Bold;
+	text-align: right;
+}
+*.Percent
+{
+	font-weight: Bold;
+	text-align: right;
+}
+*.NLessons
+{
+	font-weight: Bold;
+	text-align: right;
+}
+*.Result
+{
+	font-weight: Bold;
+}
+
+*.OK
+{
+    color: green;
+}
+*.NotOK
+{
+    color: red;
+}

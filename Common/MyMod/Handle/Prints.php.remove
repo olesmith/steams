@@ -1,0 +1,392 @@
+<?php
+
+trait MyMod_Handle_Prints
+{
+    //*
+    //* Handles module object Prints.
+    //*
+
+    function MyMod_Handle_Prints($where=array(),$latexheaders=True)
+    {
+        if (empty($_POST[ "Print" ]))
+        {
+        
+            $this->MyMod_Handle_Prints_Echo();
+            return;
+        }
+
+        $this->MyMod_Items_Read
+        (
+            $where,
+            array_keys($this->ItemData),
+            False,True
+        );        
+
+        //$this->Sort=$this->MyMod_Handle_Prints_Sort($docno);
+
+        $type="Plural";
+
+        //Testing ItemsPerPage's: triple.
+        /* $this->ItemHashes= */
+        /*     array_merge */
+        /*     ( */
+        /*         $this->ItemHashes, */
+        /*         $this->ItemHashes, */
+        /*         $this->ItemHashes */
+        /*     ); */
+        
+        
+        $docno=-1;
+        $latex="";
+        foreach ($this->LatexData[ "PluralLatexDocs" ][ "Docs" ] as $doc)
+        {
+            $docno++;
+            
+            $value=$this->MyMod_Handle_Prints_Check_Value($docno);
+
+            //var_dump($value);
+            $latex.=
+                $this->MyMod_Items_Latex(array(),$docno).
+                "\\clearpage";
+        }
+
+        
+        
+        if ($latexheaders)
+        {
+            $latex=
+                $this->MyMod_Latex_Skel
+                (
+                    $type,
+                    "Head",
+                    $docno
+                ).
+                $latex.
+                $this->MyMod_Latex_Skel
+                (
+                    $type,
+                    "Tail",
+                    $docno
+                );
+        }
+
+        //Use last item to filter
+        $latex=
+            $this->FilterObject
+            (
+                $this->FilterHash
+                (
+                    $latex,
+                    //Was saved by MyMod_Items_Latex
+                    $this->LastItem
+                )
+            );
+        
+        $texfile=
+            $this->MyMod_Handle_Prints_OutName($docno);
+
+        if (False)
+        {
+            var_dump($texfile);
+            $this->Latex_Code_Show($latex);
+            exit();
+        }        
+        $this->Latex_PDF
+        (
+            $texfile,
+            $latex
+            //,
+            //$printpdf = true, $runbibtex = false, $copypdfto = false
+        );
+        
+       
+    }
+
+    //*
+    //* Handles module object Prints. Deprecated
+    //*
+
+    function MyMod_Handle_Prints_OutName($docno)
+    {
+        return
+            preg_replace
+            (
+                '/\s+/',
+                "-",
+                $this->Html2Sort
+                (
+                    join
+                    (
+                        ".",
+                        $this->MyMod_Handle_Prints_OutNames($docno)
+                    )
+                )
+            );
+    }
+    
+    //*
+    //* Handles module object Prints. Deprecated
+    //*
+
+    function MyMod_Handle_Prints_OutNames($docno)
+    {
+        return
+            array
+            (
+                $this->LatexData[ "PluralLatexDocs" ][ "Docs" ]
+                [ $docno ]
+                [ "OutFile" ],
+                
+                $this->TimeStamp("","-",":"),
+                "tex"
+            );
+    }
+
+    
+    //*
+    //* Handles module object Prints. Deprecated
+    //*
+
+    function MyMod_Handle_Prints_Sort($docno)
+    {
+       $sort="";
+       if
+           (
+               isset
+               (
+                   $this->LatexData[ "PluralLatexDocs" ]
+                   [ "Docs" ][ $docno ][ "Sort" ]
+               )
+           )
+       {
+           $sort=
+               $this->LatexData[ "PluralLatexDocs" ]
+               [ "Docs" ][ $docno ][ "Sort" ];
+       }
+
+       if ($sort=="")
+       {
+           $this->MyMod_Sort_Detect();
+       }
+       else
+       {
+           $this->Sort=$sort;
+       }
+
+       return $sort;
+    }
+    
+   
+    //*
+    //* Initializes print item.
+    //*
+
+    function MyMod_Handle_Prints_Init()
+    {
+        $this->BarDatas=array();
+        foreach (array_keys($this->ItemData) as $data)
+        {
+            if ($this->ItemData[ $data ][ "IsBarcode" ])
+            {
+                array_push($this->BarDatas,$data);
+            }
+        }
+        
+        foreach (array_keys($this->ItemHashes) as $id)
+        {
+            $this->MyMod_Handle_Print_Init($this->ItemHashes[$id]);
+        }
+    }
+    
+    
+    //*
+    //* Echo Form controlling Prints and options.
+    //*
+
+    function MyMod_Handle_Prints_Echo()
+    {
+        $this->Htmls_Echo
+        (
+            $this->MyMod_Handle_Prints_Form()
+        );
+    }
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Form()
+    {
+        return
+            $this->Htmls_Form
+            (
+                1,
+                $this->MyMod_Handle_Prints_Form_ID(),
+
+                "",//action
+                
+                //$contents=
+                array
+                (
+                    $this->MyMod_Handle_Prints_Html()
+                ),
+                
+                //$args=
+                array
+                (
+                    "No_OnSubmit" => True,
+                    "Buttons" => array
+                    (
+                        $this->Htmls_Button("Print")
+                    ),
+                    "Hiddens" => array
+                    (
+                        "Print" => 1,
+                    ),
+                )
+            );
+    }
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Form_ID()
+    {
+        return
+            join
+            (
+                "_",
+                array
+                (
+                    $this->CGI_GET("Dest"),
+                    "Prints",
+                    $this->GetClass("ID"),
+                )
+            );
+    }
+    
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Html()
+    {
+        return
+            array
+            (
+                $this->Htmls_H
+                (
+                    2,
+                    $this->MyActions_Entry_Title()
+                ),
+                $this->Htmls_Table
+                (
+                    $this->MyMod_Handle_Prints_Titles(),
+                    $this->MyMod_Handle_Prints_Table()
+                )
+            );
+    }
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Titles()
+    {
+        return
+            array
+            (
+                "No",
+                $this->MyLanguage_GetMessage("Type"),
+                $this->MyLanguage_GetMessage("Include"),
+            );
+    }
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Table()
+    {
+        $table=array();
+
+        $n=0;
+        foreach ($this->LatexData[ "PluralLatexDocs" ][ "Docs" ] as $doc)
+        {
+            $n++;
+            array_push
+            (
+                $table,
+                $this->MyMod_Handle_Prints_Doc_Row($n,$doc)
+            );
+        }
+        
+        return $table;
+    }
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Doc_Row($docno,$doc)
+    {
+        return
+            array
+            (
+                $this->B($docno),
+                $doc[ "Name" ],
+                $this->MyMod_Handle_Prints_Doc_Cell
+                (
+                    $docno,$doc
+                )
+            );
+    }
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Doc_Cell($docno,$doc)
+    {
+        return
+            $this->Htmls_CheckBox
+            (
+                $this->MyMod_Handle_Prints_Check_Key($docno),
+                1,
+                False
+            );
+    }
+    
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Check_Value($docno)
+    {
+        return
+            $this->CGI_POST
+            (
+                $this->MyMod_Handle_Prints_Check_Key($docno)
+            );
+    }
+    //*
+    //* 
+    //*
+
+    function MyMod_Handle_Prints_Check_Key($docno)
+    {
+        return
+            join
+            (
+                "_",
+                array
+                (
+                    $this->CGI_GET("Dest"),
+                    "Check",
+                    $docno
+                )
+            );
+    }
+}
+
+?>

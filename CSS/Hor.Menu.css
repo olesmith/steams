@@ -1,0 +1,92 @@
+*.inactivemenuitem
+{
+	color: #AAAAAA;
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Bold;
+}
+*.activemenuitem
+{
+	color: orange;
+	font-size: 12px;
+	text-decoration: None;
+	font-weight: Bold;
+}
+
+*.dynamicmenuitem
+{
+   font-size: 12px;
+   text-decoration: None;
+   text-align: center;
+   font-weight: Bold;
+
+   border-top-style: none;
+   border-right-style: solid;
+   border-bottom-style: solid;
+   border-left-style: none;
+
+   padding-right: 5px;
+   padding-bottom: 5px;
+
+   margin-right: 10x;
+   margin-left: 10px;
+
+   border-color: #222222;
+   border-width: thin;
+   border-bottom-right-radius: 5px;
+   white-space: nowrap;
+}
+
+
+*.hormenu
+{
+    padding: 4px 0px;
+    margin: auto;
+}
+.tabs, .tabs a {
+	background-color: transparent;
+	text-decoration: none;
+} 
+.tabs a:hover {
+    border-bottom-color: orange;
+    color: orange;
+}
+*.tablemenu
+{
+    padding: 6px 0px;
+    margin: auto;
+}
+*.ptablemenu
+{
+	/* color: #3366ff;
+	background-color: #FFFFFF;
+	font-size: 12px; */
+	text-decoration: None;
+	/* font-weight: Bold;
+	font-family: Roman; */
+}
+*.stablemenu
+{
+	/* color: #3366ff;
+	background-color: #FFFFFF;
+	font-size: 12px; */
+	text-decoration: None;
+	/* font-weight: Bold; */
+}
+*.atablemenu
+{
+	/* color: #3366ff;
+	background-color: #FFFFFF;
+	font-size: 12px; */
+	text-decoration: None;
+	/* font-weight: Bold; */
+}
+*.sptablemenu
+{
+	/* color: #3366ff;
+	background-color: #FFFFFF;
+	font-size: 12px; */
+	text-decoration: None;
+	/* font-weight: Bold;
+	font-family: Roman; */
+}

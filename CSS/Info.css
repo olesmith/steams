@@ -1,0 +1,8 @@
+*.TypesMenu
+{
+    text-align: left;
+    border-collapse: collapse;
+	text-color: red;
+	background-color: #f3f3f3;
+	border-bottom: none !important;
+}

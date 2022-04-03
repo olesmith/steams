@@ -1,0 +1,130 @@
+array
+(
+      'Search' => array
+      (
+         'Public' => 1,
+         'Person' => 1,
+         "Admin" => 1,
+         "Friend"     => 1,
+         "Coordinator" => 1,
+         "Assessor"  => 0,
+      ),
+      'Show' => array
+      (
+         'Public' => 1,
+         'Person' => 1,
+         "Admin" => 1,
+         "Friend"     => 1,
+         "Coordinator" => 1,
+         "Assessor"  => 1,
+         "AccessMethod" => "CheckShowAccess",
+      ),
+      'Search' => array
+      (
+         'Public' => 1,
+         'Person' => 1,
+         "Admin" => 1,
+         "Friend"     => 1,
+         "Coordinator" => 1,
+         "Assessor"  => 0,
+         "AccessMethod" => "CheckShowListAccess",
+      ),
+      'Edit' => array
+      (
+         'Public' => 0,
+         'Person' => 0,
+         "Admin" => 1,
+         "Friend"     => 0,
+         "Coordinator" => 0,
+         "Assessor"  => 0,
+         "AccessMethod" => "CheckEditAccess",
+      ),
+      'Copy' => array
+      (
+         'Public' => 0,
+         'Person' => 0,
+         "Admin" => 1,
+         "Friend"     => 0,
+         "Coordinator" => 0,
+         "Assessor"  => 0,
+         "AccessMethod" => "CheckEditAccess",
+      ),
+      'EditList' => array
+      (
+         'Public' => 0,
+         'Person' => 0,
+         "Admin" => 1,
+         "Friend"     => 0,
+         "Coordinator" => 1,
+         "Assessor"  => 0,
+         "AccessMethod" => "CheckEditListAccess",
+      ),
+      'Delete' => array
+      (
+         'Public' => 0,
+         'Person' => 0,
+         "Admin" => 1,
+         "Friend"     => 0,
+         "Coordinator" => 0,
+         "Assessor"  => 0,
+         "AccessMethod"  => "CheckDeleteAccess",
+      ),
+      'Export' => array
+      (
+         'Public' => 0,
+         'Person' => 0,
+         "Admin" => 1,
+         "Friend"     => 0,
+         "Coordinator" => 1,
+         "Assessor"  => 0,
+         "AccessMethod"  => "CheckEditListAccess",
+      ),
+    "Handle" => array
+    (
+        "Href"     => "",
+        "HrefArgs" => "",
+        "Name"     => "Importar Mensagems",
+        "Name_UK"  => "Import Messages",
+        "Name_ES"     => "Importar Messajes",
+        //"Icon"     => "rubik.png",
+        "Public"   => 0,
+        "Person"   => 0,
+        "Admin"   => 1,
+        "Coordinator"   => 0,
+        "Handler"   => "Language_Messages_Handle",
+        "Singular"   => FALSE,
+         #"AccessMethod" => "CheckEditListAccess",
+    ),
+    "Permissions" => array
+    (
+        "Href"     => "",
+        "HrefArgs" => "",
+        "Name"     => "Permissões",
+        "Name_UK"  => "Permissions",
+        "Name_ES"     => "Permissiones",
+        //"Icon"     => "rubik.png",
+        "Public"   => 0,
+        "Person"   => 0,
+        "Admin"   => 1,
+        "Coordinator"   => 0,
+        "Handler"   => "Language_Message_Permissions",
+        "Singular"   => True,
+        "AccessMethod" => "CheckEditListAccess",
+    ),
+    "Messages" => array
+    (
+        "Href"     => "",
+        "HrefArgs" => "",
+        "Name"     => "Mensagens",
+        "Name_UK"  => "Messages",
+        "Name_ES"     => "Mensajes",
+        //"Icon"     => "rubik.png",
+        "Public"   => 0,
+        "Person"   => 0,
+        "Admin"   => 1,
+        "Coordinator"   => 0,
+        "Handler"   => "Language_Message_Messages",
+        "Singular"   => True,
+        "AccessMethod" => "CheckEditListAccess",
+    ),
+);

@@ -1,0 +1,82 @@
+*.Name
+{
+}
+*.OnName
+{
+  	background-color: gray;
+}
+*.OffName
+{
+  	background-color: gray;
+}
+
+
+*.Title
+{
+}
+*.OnTitle
+{
+  	background-color: lightgray;
+}
+*.OffTitle
+{
+  	background-color: lightgray;
+}
+
+
+*.ShortName
+{
+}
+*.OnShortName
+{
+  	background-color: lightgray;
+}
+*.OffShortName
+{
+  	background-color: lightgray;
+}
+
+
+
+*.PT
+{
+}
+*.OnPT
+{
+  	background-color: lightgray;
+}
+*.OffPT
+{
+  	background-color: lightgray;
+}
+
+*.UK
+{
+}
+*.OnUK
+{
+  	background-color: lightgray;
+}
+*.OffUK
+{
+  	background-color: lightgray;
+}
+
+*.ES
+{
+}
+*.OnES
+{
+  	background-color: lightgray;
+}
+*.OffES
+{
+  	background-color: lightgray;
+}
+
+
+*.Language_Cell
+{
+  	background-color: #DDDDDD;
+    width: 500px;
+}

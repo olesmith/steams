@@ -1,0 +1,140 @@
+*.Semester_Banner
+{
+	color: #8080ff;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: Bold;
+	list-style-type: none;
+}
+
+*.Room_WeekDay_Title
+{
+    /* Add as STYLE to TD in order to work in tables */
+    vertical-align: middle;
+	color: black;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+*.Lesson_Allocation_Course
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: bold;
+	font-style: italic;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Discipline
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: bold;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Class
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: bold;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Entities
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+}
+
+*.Lesson_Allocation_Teachers
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Hour
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+    display: none;
+}
+*.Lesson_Allocation_Room
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+    display: none;
+}
+*.Lesson_Allocation_Solicitation
+{
+	color: #222222;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+    display: none;
+}
+
+
+*.Lesson_Allocation_Status_Not
+{
+	color: green;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Status_OK
+{
+	color: green;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: None;
+	list-style-type: none;
+}
+*.Lesson_Allocation_Status_Error
+{
+	color: red;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: None;
+	font-weight: Bold;
+	list-style-type: none;
+}
+*.Contents
+{
+	white-space: pre-wrap
+}
+*.Bibliography
+{
+	white-space: pre-wrap
+}
+*.Bibliography_Complementary
+{
+	white-space: pre-wrap
+}

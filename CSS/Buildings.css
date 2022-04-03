@@ -1,0 +1,59 @@
+TABLE.Schedule
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+TR.Schedule:hover
+{
+   color:white;
+   background-color: grey;
+}
+TD.Schedule
+{
+    border-width: 0px;
+    padding: 0px;
+}
+TD.Schedule:hover
+{
+ibackground: transparent;
+}
+
+TH.Schedule
+{
+    border-width: 0px;
+    padding: 0px;
+}
+*.WeekDay_Menu
+{
+    text-align: center;
+}
+*.Shift_Menu
+{
+    text-align: center;
+}
+*.Hidden
+{
+	color: gray;
+}
+*.Visible
+{
+	color: orange;
+}
+*.Toggle
+{
+    text-align: center;
+}
+*.Title
+{
+    /* display: none; */
+    text-align: center;
+}
+*.HTitle
+{
+    /* display: none; */
+    text-align: center;
+}
+*.Cell
+{
+    /* display: none; */
+}

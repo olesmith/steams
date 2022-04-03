@@ -1,0 +1,36 @@
+*.Lesson_Allocation_Course
+{
+    display: none;
+}
+*.Lesson_Allocation_Class
+{
+}
+*.Lesson_Allocation_Entities
+{
+    display: none;
+}
+
+*.Lesson_Allocation_Teachers
+{
+}
+*.Lesson_Allocation_Hour
+{
+    display: none;
+}
+*.Lesson_Allocation_Room
+{
+}
+*.Lesson_Allocation_Solicitation
+{
+}
+
+
+*.Lesson_Allocation_Status_Not
+{
+}
+*.Lesson_Allocation_Status_OK
+{
+}
+*.Lesson_Allocation_Status_Error
+{
+}
